@@ -187,7 +187,7 @@ final class WrapperRunner implements RunnerInterface
                     continue;
                 }
 
-                if (! $worker->isFree()) {
+                if (! $worker->isFree() || $worker->process->getExitCode() > 0) {
                     throw $worker->getWorkerCrashedException();
                 }
 

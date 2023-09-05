@@ -60,6 +60,8 @@ use ParaTest\WrapperRunner\WrapperWorker;
     );
 
     while (true) {
+	error_reporting(-1);
+	ini_set('display_errors', 'On');
         if (feof(STDIN)) {
             $application->end();
             exit;

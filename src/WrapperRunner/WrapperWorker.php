@@ -40,7 +40,7 @@ final class WrapperWorker
 
     public readonly SplFileInfo $testdoxFile;
     private ?string $currentlyExecuting = null;
-    private Process $process;
+    public Process $process;
     private int $inExecution = 0;
     private InputStream $input;
     private int $exitCode = -1;
